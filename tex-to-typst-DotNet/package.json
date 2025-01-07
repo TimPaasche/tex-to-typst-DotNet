@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "tex-to-typst": "^0.0.13"
+  }
+}

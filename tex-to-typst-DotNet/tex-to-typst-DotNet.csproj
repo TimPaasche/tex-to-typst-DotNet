@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>tex-to-typst-DotNet</PackageId>
+        <Version>0.1.0</Version>
+        <Authors>Tim Paasche</Authors>
+        <Description>Convert Tex formula to Typst formula, with the implementation of the TS npm package tex-to-typst</Description>
+        <PackageTags>Tex, Typst</PackageTags>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="node_modules\**\*" CopyToOutputDirectory="PreserveNewest" />
+        <Content Include="package-lock.json" CopyToOutputDirectory="PreserveNewest" />
+        <Content Include="package.json" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+</Project>
