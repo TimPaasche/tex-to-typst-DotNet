@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace MdToTexDotNet;
+namespace TexToTypstDotNet;
 
 public static class TexToTypst
 {
