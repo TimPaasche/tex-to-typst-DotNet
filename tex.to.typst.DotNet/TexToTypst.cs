@@ -17,14 +17,14 @@ public static class TexToTypst
             StartInfo = new ProcessStartInfo
             {
                 FileName = nodePath,
-                Arguments = $"{scriptPath} \"{tex}\"", 
+                Arguments = $"{scriptPath} \"{tex}\"",
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
-                UseShellExecute = false, 
+                UseShellExecute = false,
                 CreateNoWindow = true
             }
         };
-        
+
         process.Start();
 
         string output = process.StandardOutput.ReadToEnd();
@@ -36,11 +36,6 @@ public static class TexToTypst
             return output;
         }
 
-        if (!string.IsNullOrWhiteSpace(error))
-        {
-            throw new Exception(error);
-        }
-        
-        return string.Empty;
+        throw new Exception(error);
     }
 }

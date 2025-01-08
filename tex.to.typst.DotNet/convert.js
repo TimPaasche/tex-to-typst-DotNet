@@ -9,7 +9,7 @@ if (!latexContent) {
 
 try {
     const typstContent = texToTypst(latexContent);
-    console.log(`TYPST=${typstContent.value}`);
+    console.log(typstContent.value);
 } catch (error) {
-    console.log(`LATEX=${latexContent}`);
+    console.error(error);
 }
