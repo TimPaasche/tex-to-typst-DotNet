@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
+using System.Reflection;
 
 namespace TexToTypstDotNet;
 
@@ -8,7 +10,7 @@ public static class TexToTypst
     public static string Convert(string tex)
     {
         string nodePath = "node.exe"; // Path to Node.js executable
-        string scriptPath = "convert.js"; // Path to your script file
+        string scriptPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "convert.js");// Path to your script file
 
         // Escape the LaTeX content for safe command-line usage
         tex = tex.Replace("\"", "\\\"");
